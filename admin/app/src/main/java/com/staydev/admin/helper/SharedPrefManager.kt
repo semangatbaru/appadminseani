@@ -14,12 +14,13 @@ class SharedPrefManager private constructor(context: Context){
         }
 
     //this method will give the logged in user
-    val mlogin: Mlogin
+    val mloginadmin: Mlogin
         get() {
             val sharedPreferences = ctx?.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
             return Mlogin(
-                sharedPreferences?.getString(KEY_EMAIL, null),
-                sharedPreferences?.getString(KEY_TOKEN, null)
+                    sharedPreferences!!.getInt(KEY_IDADMIN, 0),
+                    sharedPreferences.getString(KEY_EMAIL, null),
+                    sharedPreferences.getString(KEY_TOKEN, null)
 
             )
         }
@@ -33,6 +34,7 @@ class SharedPrefManager private constructor(context: Context){
     fun mUserLogin(mlogin: Mlogin) {
         val sharedPreferences = ctx?.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
         val editor = sharedPreferences?.edit()
+        editor?.putInt(KEY_IDADMIN, mlogin.id_admin)
         editor?.putString(KEY_EMAIL, mlogin.email)
         editor?.putString(KEY_TOKEN, mlogin.token)
         editor?.apply()
@@ -50,7 +52,7 @@ class SharedPrefManager private constructor(context: Context){
     companion object {
 
         private val SHARED_PREF_NAME = "login"
-        private const val KEY_IDMERCHANT = "keyidmerchant"
+        private const val KEY_IDADMIN = "keyidmerchant"
         private val KEY_EMAIL = "keyemail"
         private val KEY_TOKEN = "keytoken"
         private var mInstance: SharedPrefManager? = null

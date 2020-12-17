@@ -1,5 +1,5 @@
 package com.staydev.admin.model
 
 class Mlogin (
-    var email: String?, var token: String?
+    var id_admin:Int,var email: String?, var token: String?
 )
