@@ -15,8 +15,8 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.staydev.admin.helper.SharedPrefManager
 import com.staydev.admin.model.Mlogin
-import com.staydev.seani.helper.Urls
-import com.staydev.seani.helper.VolleySingleton
+import com.staydev.admin.helper.Urls
+import com.staydev.admin.helper.VolleySingleton
 import org.json.JSONException
 import org.json.JSONObject
 
