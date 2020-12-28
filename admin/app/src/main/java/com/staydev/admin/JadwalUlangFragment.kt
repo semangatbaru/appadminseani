@@ -84,7 +84,6 @@ class JadwalUlangFragment : Fragment() {
                                     data.getInt("id_user"),
                                     data.getString("tgl_sewa"),
                                     data.getInt("total"),
-                                    data.getInt("bayar"),
                                     data.getString("status"),
                                     data.getDouble("lahan")
                                 )

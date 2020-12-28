@@ -7,4 +7,10 @@
     <string name="total">100.000</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="detail_sewa">Detail Sewa</string>
+    <string name="email">Masukkan Email Admin</string>
+    <string name="password">Masukkan Password</string>
+    <string name="login">Login</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

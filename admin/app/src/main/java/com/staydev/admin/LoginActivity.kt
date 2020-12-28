@@ -22,7 +22,7 @@ import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var btnLogin:CardView
+    private lateinit var btnLogin:Button
     private lateinit var inputEmail:EditText
     private lateinit var inputPassword:EditText
 
@@ -30,14 +30,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-//        if (SharedPrefManager.getInstance(this).isLoggedIn) {
-//            finish()
-//            startActivity(Intent(this, Dashboard::class.java))
-//        }
+        if (SharedPrefManager.getInstance(this).isLoggedIn) {
+            finish()
+            startActivity(Intent(this, ActivityHome::class.java))
+        }
 
-        btnLogin = findViewById(R.id.btnLogin)
-        inputEmail = findViewById(R.id.inputEmail)
-        inputPassword = findViewById(R.id.inputPassword)
+        btnLogin = findViewById(R.id.login)
+        inputEmail = findViewById(R.id.email)
+        inputPassword = findViewById(R.id.password)
 
         btnLogin.setOnClickListener {
             regis()
@@ -96,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
                             //starting the MainActivity
 
                             finish()
-                            startActivity(Intent(applicationContext, Dashboard::class.java))
+                            startActivity(Intent(applicationContext, ActivityHome::class.java))
                             Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_SHORT).show()
 
                         } else {
