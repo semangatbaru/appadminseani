@@ -110,7 +110,7 @@ class LoginActivity : AppCompatActivity() {
                         e.printStackTrace()
                     }
                 },
-                Response.ErrorListener { error -> Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show() }) {
+                Response.ErrorListener { error -> Toast.makeText(this, "terjadi kesalahan. coba ulang", Toast.LENGTH_SHORT).show() }) {
             @Throws(AuthFailureError::class)
             override fun getParams(): LinkedHashMap<String, String> {
                 val params = LinkedHashMap<String, String>()

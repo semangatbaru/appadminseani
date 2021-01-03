@@ -13,4 +13,11 @@
     <string name="title_activity_home">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
+    <string name="agenda">Agenda</string>
+    <string name="alat">Alat</string>
+    <string name="tambah_alat">Tambah Alat</string>
+    <string name="nama_alat">Nama Alat</string>
+    <string name="stok">Stok</string>
+    <string name="harga">Harga</string>
+    <string name="desktipsi">Desktipsi</string>
 </resources>

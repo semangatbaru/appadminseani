@@ -1,9 +1,12 @@
 package com.staydev.admin.helper
 
 import android.content.Context
+import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Request
 import com.android.volley.RequestQueue
+import com.android.volley.RetryPolicy
 import com.android.volley.toolbox.Volley
+
 
 class VolleySingleton private constructor(context: Context){
     private var mRequestQueue: RequestQueue
@@ -20,6 +23,7 @@ class VolleySingleton private constructor(context: Context){
         mRequestQueue = requestQueue
     }
     fun <T> addToRequestQueue(req: Request<T>) {
+
         requestQueue.add(req)
     }
     companion object {

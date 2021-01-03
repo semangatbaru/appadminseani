@@ -103,7 +103,7 @@ class ProsesFragment : Fragment() {
             Response.ErrorListener { error ->
                 Toast.makeText(
                     activity,
-                    error.message,
+                    "load",
                     Toast.LENGTH_SHORT
                 ).show()
                 Log.d("eror", error.message.toString())
