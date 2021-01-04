@@ -13,6 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.android.volley.AuthFailureError
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
+import com.staydev.admin.adapter.AdapterProses
 import com.staydev.admin.adapter.AdapterStatus
 import com.staydev.admin.helper.SharedPrefManager
 import com.staydev.admin.helper.Urls
@@ -89,7 +90,7 @@ class ProsesFragment : Fragment() {
                                 )
                             )
                         }
-                        mRecyclerView.adapter = AdapterStatus(list, requireContext())
+                        mRecyclerView.adapter = AdapterProses(list, requireContext())
 
                     } else {
                         Toast.makeText(activity, obj.getString("message"), Toast.LENGTH_SHORT)

@@ -51,6 +51,7 @@ class JadwalUlangFragment : Fragment() {
         getStatusJU()
         return root
     }
+
     private fun getStatusJU() {
         val user = SharedPrefManager.getInstance(requireContext()).mloginadmin
         val token = user.token.toString()
@@ -102,8 +103,7 @@ class JadwalUlangFragment : Fragment() {
             },
             Response.ErrorListener { error ->
                 Toast.makeText(
-                    activity,
-                    error.message,
+                    activity,"server sibuk, sedang memuat",
                     Toast.LENGTH_SHORT
                 ).show()
                 Log.d("eror", error.message.toString())

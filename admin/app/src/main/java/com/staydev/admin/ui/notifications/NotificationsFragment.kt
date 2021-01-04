@@ -70,6 +70,11 @@ class NotificationsFragment : Fragment() {
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+        getData()
+    }
+
     private fun getData() {
         val user = SharedPrefManager.getInstance(requireContext()).mloginadmin
         val token = user.token.toString()

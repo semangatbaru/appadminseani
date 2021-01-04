@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -35,6 +36,7 @@ class HomeFragment : Fragment() {
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var list: ArrayList<Msewa>
     private lateinit var mSwipeRefresh: SwipeRefreshLayout
+    private lateinit var mLogout: ImageView
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -44,6 +46,11 @@ class HomeFragment : Fragment() {
         root = inflater.inflate(R.layout.fragment_home, container, false)
 
         list = ArrayList()
+
+        mLogout  =  root.findViewById(R.id.exit)
+        mLogout.setOnClickListener {
+            activity?.let { SharedPrefManager.getInstance(it).logout() }
+        }
 
         mRecyclerView = root.findViewById(R.id.mRecyclerViewAgenda)
         mRecyclerView.setHasFixedSize(true)

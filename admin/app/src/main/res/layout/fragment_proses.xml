@@ -17,7 +17,7 @@
                 android:id="@+id/mRecyclerViewProses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/list_status"/>
+                tools:listitem="@layout/list_proses"/>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </RelativeLayout>
 

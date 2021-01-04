@@ -101,8 +101,7 @@ class SetujuFragment : Fragment() {
             },
             Response.ErrorListener { error ->
                 Toast.makeText(
-                    activity,
-                    error.message,
+                    activity,"server sibuk, sedang memuat",
                     Toast.LENGTH_SHORT
                 ).show()
                 Log.d("eror", error.message.toString())
